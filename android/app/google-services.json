@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "872303374627",
+    "project_id": "genderbasedviolence-d716a",
+    "storage_bucket": "genderbasedviolence-d716a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:872303374627:android:60fb525b320e15e6415c96",
+        "android_client_info": {
+          "package_name": "com.example.flutter_project"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdwzyTzSHF92lG9Yt9Wf6F7AHtczr7x5c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

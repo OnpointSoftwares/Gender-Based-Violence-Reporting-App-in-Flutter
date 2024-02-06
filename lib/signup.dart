@@ -50,6 +50,7 @@ class _LoginPageState extends State<LoginPage> {
             children: [
               Image.network(
                   'https://taxmartkenya.co.ke/wp-content/uploads/2021/11/488809.jpg'),
+              SizedBox(height: 20),
               Container(
                 width: 200, // Set the width of the dropdown
                 child: DropdownButton<String>(
@@ -60,7 +61,7 @@ class _LoginPageState extends State<LoginPage> {
                       _userType = newValue!;
                     });
                   },
-                  items: <String>['Client', 'Admin']
+                  items: <String>['Victim', 'Admin', 'Police']
                       .map<DropdownMenuItem<String>>(
                         (String value) {
                       return DropdownMenuItem<String>(
@@ -71,30 +72,41 @@ class _LoginPageState extends State<LoginPage> {
                   ).toList(),
                 ),
               ),
+              SizedBox(height: 20),
               TextFormField(
                 controller: _emailController,
-                decoration: const InputDecoration(labelText: 'Email'),
+                decoration: const InputDecoration(
+                  labelText: 'Email',
+                  hintText: 'Enter your email',
+                ),
+                keyboardType: TextInputType.emailAddress,
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Please enter your email';
                   }
+                  // Add more specific email validation if needed
                   return null;
                 },
               ),
               SizedBox(height: 10),
               TextFormField(
                 controller: _passwordController,
-                decoration: const InputDecoration(labelText: 'Password'),
+                decoration: const InputDecoration(
+                  labelText: 'Password',
+                  hintText: 'Enter your password',
+                ),
                 obscureText: true,
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Please enter your password';
                   }
+                  // Add more password validation if needed
                   return null;
                 },
               ),
               SizedBox(height: 20),
               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   ElevatedButton(
                     onPressed: () {
@@ -124,7 +136,11 @@ class _LoginPageState extends State<LoginPage> {
       final String password = _passwordController.text.trim();
       final String userType = _userType;
 
-      // Implement your login logic here based on userType
+      // TODO: Implement actual login logic, handle success and failure
+      // For example, you can use a service or API for authentication.
+      // If successful, navigate to a new screen.
+      // If unsuccessful, show an error message.
+
       // For now, just print the values
       print('User Type: $userType');
       print('Email: $email');
@@ -138,7 +154,11 @@ class _LoginPageState extends State<LoginPage> {
       final String password = _passwordController.text.trim();
       final String userType = _userType;
 
-      // Implement your signup logic here
+      // TODO: Implement actual signup logic, handle success and failure
+      // For example, you can use a service or API for user registration.
+      // If successful, navigate to a new screen.
+      // If unsuccessful, show an error message.
+
       // For now, just print the values
       print('User Type: $userType');
       print('Email: $email');

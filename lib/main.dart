@@ -60,7 +60,7 @@ class _LoginPageState extends State<LoginPage> {
                       _userType = newValue!;
                     });
                   },
-                  items: <String>['Client', 'Admin']
+                  items: <String>['Client', 'Admin','Poilice']
                       .map<DropdownMenuItem<String>>(
                         (String value) {
                       return DropdownMenuItem<String>(
@@ -173,7 +173,7 @@ class SignupPage extends StatelessWidget {
                   _userType = newValue;
                 }
               },
-              items: <String>['Client', 'Admin'].map<DropdownMenuItem<String>>(
+              items: <String>['Client', 'Admin','Police'].map<DropdownMenuItem<String>>(
                     (String value) {
                   return DropdownMenuItem<String>(
                     value: value,
